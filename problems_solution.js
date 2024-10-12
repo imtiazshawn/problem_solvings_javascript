@@ -125,3 +125,36 @@ const palindromeCheck = (theString) => {
 }
 
 console.log(palindromeCheck('Madam'));
+
+
+// 0008: Find the Second Largest Number in an Array
+const findingLargestNum = (arr) => {
+    let largestNum = 0;
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > largestNum) {
+            largestNum = arr[i]
+        }
+    }
+    
+    return largestNum;
+}
+
+
+const findingSecondLargest = (arr) => {
+    const largestNum = findingLargestNum(arr);
+    let secondLargestNum = 0;
+    let newArr = [];
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] !== largestNum) {
+            newArr.push(arr[i]);
+        }
+    }
+    secondLargestNum = findingLargestNum(newArr);
+    
+    return secondLargestNum;
+}
+
+
+console.log(findingSecondLargest([7, 11, 34, 21]));
