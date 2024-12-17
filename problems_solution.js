@@ -243,3 +243,19 @@ const mergeNSortArr = (arr1, arr2) => {
 }
 
 console.log(mergeNSortArr([2, 1, 3, 4], [6, 5, 9, 8, 7]));
+
+
+
+// 0013
+// For input = [1, 2, 1], elementToReplace = 1 and subtrationElem = 3,
+// The output should be arrayReplace(inputArray, elementToReplace, substrationElem) = [3, 2, 3]
+function arrayReplace(inputArray, elementToReplace, substrationElem) {
+    inputArray.forEach((element, index) => {
+        if(element === elementToReplace) {
+            inputArray[index] = substrationElem;
+        }
+    })
+    console.log(inputArray);
+}
+
+arrayReplace([1, 2, 1], 1, 3);
