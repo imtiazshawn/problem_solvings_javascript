@@ -327,7 +327,6 @@ const longestWordChecker = (arr) => {
 console.log(longestWordChecker(['I', 'Am', 'Going', 'To', 'Rule', 'The', 'World']));
 
 
-
 // 0022: Find longest word from a sentence
 const findLongestWord = (str) => {
     const words = str.split(' ');
@@ -339,7 +338,6 @@ const sentence1 = "The quick brown fox jumps over the lazy dog";
 const sentence2 = "Python is awesome programming language";
 console.log(findLongestWord(sentence1));
 console.log(findLongestWord(sentence2));
-
 
 
 // 0023: Sum all numbers in a range.
@@ -373,7 +371,6 @@ function findingLargestNum(numArr) {
 console.log(findingLargestNum([4, 2, 12, 15, 11, 22, 1]));
 
 
-
 // 0025: Confirm the ending of a string.
 function confirmEnding(str, target) {
     return str.slice(-target.length) === target;
@@ -390,3 +387,29 @@ function repeatString(str, num) {
 
 console.log(repeatString("abc", 9));
 console.log(repeatString("xyz", 0));
+
+
+// 0027: Truncate a string if it is longer than a given length.
+function truncateString(str, maxLength) {
+    if (str.length <= maxLength) {
+        return str;
+    }
+    return str.slice(0, maxLength) + "...";
+}
+
+console.log(truncateString("OpenAI is amazing!", 10));
+console.log(truncateString("Hello!", 10));
+
+
+// 0028: Find the intersection of two arrays
+function findIntersection(arr1, arr2) {
+    let intersections = [];
+    for(let i = 0; i < arr1.length; i++) {
+        if(arr2.includes(arr1[i])){
+            intersections.push(arr1[i]);
+        }
+    }
+    return intersections;
+}
+
+console.log(findIntersection([1, 2, 3], [2, 3, 4]));
