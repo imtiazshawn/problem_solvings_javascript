@@ -298,3 +298,76 @@ const checkSequence = (arr) => {
 }
 
 console.log(checkSequence([1, 2, 3, 4]));
+
+
+
+// 0020: Factorial Number Checker
+const factorialNum = (num) => {
+    let result = 1;
+    for(let i = 1; i <= num; i++) {
+        result = result * i;
+    }
+    return result;
+}
+
+console.log(factorialNum(0));
+
+
+// 0021: Find longest Word in an array
+const longestWordChecker = (arr) => {
+    let longestWord = '';
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length > longestWord.length) {
+            longestWord = arr[i];
+        }
+    }
+    return longestWord;
+}
+
+console.log(longestWordChecker(['I', 'Am', 'Going', 'To', 'Rule', 'The', 'World']));
+
+
+
+// 0022: Find longest word from a sentence
+const findLongestWord = (str) => {
+    const words = str.split(' ');
+    words.sort((a, b) => b.length - a.length);
+    return words[0];
+}
+
+const sentence1 = "The quick brown fox jumps over the lazy dog";
+const sentence2 = "Python is awesome programming language";
+console.log(findLongestWord(sentence1));
+console.log(findLongestWord(sentence2));
+
+
+
+// 0023: Sum all numbers in a range.
+function sumAllNumbersInRange(start, end) {
+    const min = Math.min(start, end);
+    const max = Math.max(start, end);
+
+    // return ((max - min + 1) * (min + max)) / 2;
+    let result = 0;
+    for(let i = min; i <= max; i++) {
+        result += i;
+    }
+    return result;
+}
+
+console.log(sumAllNumbersInRange(1, 5));
+console.log(sumAllNumbersInRange(5, 1));
+
+
+// 0024: Finding Largest Number in an Array
+function findingLargestNum(numArr) {
+    let largestNum = 0;
+    for(let i = 0; i < numArr.length; i++) {
+        if(largestNum < numArr[i]) {
+            largestNum = numArr[i];
+        }
+    }
+    return largestNum;
+}
+
+console.log(findingLargestNum([4, 2, 12, 15, 11, 22, 1]));
