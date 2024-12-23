@@ -371,3 +371,22 @@ function findingLargestNum(numArr) {
 }
 
 console.log(findingLargestNum([4, 2, 12, 15, 11, 22, 1]));
+
+
+
+// 0025: Confirm the ending of a string.
+function confirmEnding(str, target) {
+    return str.slice(-target.length) === target;
+}
+
+console.log(confirmEnding("OpenAI is amazing", "amazing"));
+console.log(confirmEnding("Hello, world!", "world"));
+
+
+// 0026: Repeat a string a specified number of times
+function repeatString(str, num) {
+    return num > 0 ? str.repeat(num) : "";
+}
+
+console.log(repeatString("abc", 9));
+console.log(repeatString("xyz", 0));
